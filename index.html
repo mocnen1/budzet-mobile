@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Bezpieczeństwo: strona może wczytywać i łączyć się WYŁĄCZNIE z własnym adresem.
+     Żadnych zewnętrznych skryptów, serwerów, analityki. -->
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' blob: data:; media-src 'self' blob: mediastream:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#1565C0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Budżet">
+<title>Budżet</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="gora">
+  <h1 id="tytul">Dodaj</h1>
+  <span id="licznik-oczekujace" class="pigulka" hidden></span>
+</header>
+
+<div id="baner-instalacji" class="baner" hidden></div>
+
+<main id="widok"></main>
+
+<nav class="dol">
+  <button data-widok="dodaj" class="aktywny"><span class="ikona">➕</span><span>Dodaj</span></button>
+  <button data-widok="historia"><span class="ikona">📋</span><span>Historia</span></button>
+  <button data-widok="wyslij"><span class="ikona">📤</span><span>Wyślij</span><span id="badge-wyslij" class="badge" hidden></span></button>
+  <button data-widok="ustawienia"><span class="ikona">⚙️</span><span>Ustawienia</span></button>
+</nav>
+
+<div id="toast" class="toast" hidden></div>
+
+<script src="lib/qrcode.js"></script>
+<script src="lib/jsQR.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
